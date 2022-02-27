@@ -94,9 +94,9 @@ function draw() {
   };
   var options = {
   nodes:{
-    color: '#000000',
+    color: '#F0CF85',
     fixed: false,
-    font: '24px arial white',
+    font: '24px arial black',
     scaling: {
       label: true
     },

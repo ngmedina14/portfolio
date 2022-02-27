@@ -21,42 +21,27 @@
             border: 1px solid lightgray;
         }
 
-        html,
         body {
             margin: 0;
             padding: 0;
         }
 
-        .background {
-            position: absolute;
-            display: block;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
     </style>
 </head>
 
 <body>
-    <a href="google.com">Backend</a>
-    <p>
-        Scale nodes and edges depending on their value. Hover over nodes and edges to
-        get more information.
-    </p>
+    <!-- vis.js network graph -->
     <div id="mynetwork"></div>
 
+    <!-- particles.js container --> 
+    <div id="particles-js"></div>
 
-    <!-- particles.js container --> <div id="particles-js"></div>
-
+    <script type="text/javascript" src="./assets/js/tsparticles.min.js"></script>
     <script type="text/javascript" src="./assets/js/portfolio.js"></script>
     <script type="text/javascript" src="./assets/js/graph.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        particlesJS.load('particles-js', './assets/json/particlesjs-config.json', function () {
-            console.log('particles.json loaded..');
-        });
+        
     </script>
-
 </body>
 
 </html>
