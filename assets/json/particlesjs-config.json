@@ -328,7 +328,7 @@
       },
       "decay": 0,
       "distance": {},
-      "direction": "top-right",
+      "direction": "right",
       "drift": 0,
       "enable": true,
       "gravity": {
@@ -603,7 +603,7 @@
     },
     "position": {
       "x": -5,
-      "y": 140
+      "y": 55
     }
   }
 }
