@@ -96,7 +96,7 @@ function draw() {
   nodes:{
     color: '#F0CF85',
     fixed: false,
-    font: '24px arial black',
+    font: '36px arial black',
     scaling: {
       label: true
     },
