@@ -107,6 +107,7 @@ function draw() {
         background: '#7EC8E3',
       }, 
       borderWidth:3,
+      fixed:true
     },
     sub: {
       shape: 'circle',  
@@ -155,12 +156,12 @@ function draw() {
   },
   layout: {
     randomSeed:1,
-    clusterThreshold: 150
+    clusterThreshold: 150,
    },
   edges: {
     smooth: {
         enabled: true,
-        type: 'continuous'
+        type: 'continuous',
     },
     arrows: {
       from: {
@@ -185,7 +186,7 @@ physics: {
     theta: 0.5,
     centralGravity: 0.003,
     springConstant: 1,
-    springLength: 90,
+    springLength: 120,
     damping: 1,
     avoidOverlap: 1
   },
