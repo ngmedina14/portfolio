@@ -107,7 +107,6 @@ function draw() {
         background: '#7EC8E3',
       }, 
       borderWidth:3,
-      fixed:true
     },
     sub: {
       shape: 'circle',  
