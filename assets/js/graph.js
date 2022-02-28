@@ -6,7 +6,7 @@ function draw() {
   // create people.
   // value corresponds with the age of the person
   nodes = [
-    { id: 1, group:'main', value: 1, label: "Neil Medina" },
+    { id: 1, group:'main', value: 1, label: "Neil Medina \n   Web Developer   " },
     { id: 2, group:'sub', value: 6, label: "Back-end" },
     { id: 3, group:'sub', value: 12, label: "Front-end" },
     { id: 4, group:'sub', value: 16, label: "Dev-ops" },
@@ -34,7 +34,7 @@ function draw() {
     { id: 26, group:'title', value: 18, label: "Electronics" },
     { id: 27, value: 18, label: "Arduino" },
     { id: 28, value: 18, label: "Rasberry Pi" },
-    { id: 29, value: 18, label: "ML" },
+    { id: 29, group:'title', value: 18, label: "Machine\nLearning" },
     { id: 30, value: 18, label: "Tensorflow" },
     { id: 31, group:'title', value: 18, label: "Documentation" },
     { id: 32, value: 18, label: "Markdown" },
@@ -96,7 +96,7 @@ function draw() {
   interaction:{
     hover:true,
     hoverConnectedEdges: false,
-    zoomView: false,
+    zoomView: true,
     dragView: false,
   },
   groups: {
@@ -129,9 +129,9 @@ function draw() {
     borderWidthSelected: 0,
     shape: 'box',
     chosen: {
-      enabled:true,
+      enabled:false,
       label:function (values, id, selected, hovering) {
-        // values.size = 50;
+        values.mod = 'bold';
     }
     },
     color: {
@@ -155,7 +155,7 @@ function draw() {
   },
   layout: {
     randomSeed:1,
-    clusterThreshold:100
+    clusterThreshold: 150
    },
   edges: {
     smooth: {
@@ -172,7 +172,7 @@ function draw() {
     arrowStrikethrough: false,
     chosen: true,
     color: {
-      highlight:'#5A5A5A',
+      highlight:'#e3e3e1',
       opacity:1.0
     },
 
