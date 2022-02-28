@@ -173,7 +173,7 @@ function draw() {
     arrowStrikethrough: false,
     chosen: true,
     color: {
-      highlight:'#e3e3e1',
+      highlight:'#7EC8E3',
       opacity:1.0
     },
 
