@@ -34,7 +34,7 @@ function draw() {
     { id: 26, value: 18, label: "Electronics" },
     { id: 27, value: 18, label: "Arduino" },
     { id: 28, value: 18, label: "Rasberry Pi" },
-    { id: 29, value: 18, label: "Machine Learning" },
+    { id: 29, value: 18, label: "ML" },
     { id: 30, value: 18, label: "Tensorflow" },
     { id: 31, value: 18, label: "Documentation" },
     { id: 32, value: 18, label: "Markdown" },
@@ -94,18 +94,62 @@ function draw() {
   };
   var options = {
   nodes:{
-    color: '#A2B295',
+    borderWidthSelected: 0,
+    shape: 'box',
+    color: {
+      border: '#fdfdfd',
+      background: '#e3e3e1',
+      highlight: {
+        border: '#2B7CE9',
+        background: '#7EC8E3',
+      },
+    },
+    
     fixed: false,
-    font: '36px arial black',
+    mass: 2,
+    labelHighlightBold: true,
+    colorHighlight:'#7EC8E3',
+    font: '30px arial #505050',
     scaling: {
       label: true
     },
     shadow: true
-  }
+  },
+  layout: {
+    randomSeed:1,
+   },
+  edges: {
+    smooth: {
+        enabled: false,
+        type: 'continuous'
+    }
+},
+physics: {
+  // Even though it's disabled the options still apply to network.stabilize().
+  enabled: true,
+  solver: "forceAtlas2Based",
+  hierarchicalRepulsion: {
+    centralGravity:  0.1,
+    springLength: 200,
+    springConstant: 0.05,
+    nodeDistance: 100,
+    damping: 0.05,
+    avoidOverlap: 1
+  },
+  forceAtlas2Based: {
+    theta: 0.5,
+    centralGravity: 0.01,
+    springConstant: 1,
+    springLength: 90,
+    damping: 1,
+    avoidOverlap: 1
+  },
+  maxVelocity: 100,
+    minVelocity: 0.1,
+}
 }
   network = new vis.Network(container, data, options);
 }
-
 window.addEventListener("load", () => {
   draw();
 });
