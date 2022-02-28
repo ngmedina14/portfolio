@@ -98,6 +98,7 @@ function draw() {
     hoverConnectedEdges: false,
     zoomView: true,
     dragView: false,
+    navigationButtons: true,
   },
   groups: {
     main: {

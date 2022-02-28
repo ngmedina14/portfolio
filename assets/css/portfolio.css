@@ -1,0 +1,16 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Network Graph */
+.vis-button{
+    filter:grayscale();
+}
+#mynetwork {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid lightgray;
+}
