@@ -6,7 +6,7 @@ function draw() {
   // create people.
   // value corresponds with the age of the person
   nodes = [
-    { id: 1, group:'main', value: 1, label: "Neil Medina \n   Web Developer   " },
+    { id: 1, group:'main', value: 1, label: "Neil Medina\nWeb Developer" },
     { id: 2, group:'sub', value: 6, label: "Back-end" },
     { id: 3, group:'sub', value: 12, label: "Front-end" },
     { id: 4, group:'sub', value: 16, label: "Dev-ops" },
@@ -151,7 +151,7 @@ function draw() {
     fixed: false,
     mass: 2,
     labelHighlightBold: true,
-    font: '30px arial #505050',
+    font: '50px arial #505050',
     shadow: true
   },
   layout: {
@@ -186,7 +186,7 @@ physics: {
     theta: 0.5,
     centralGravity: 0.003,
     springConstant: 1,
-    springLength: 120,
+    springLength: 190,
     damping: 1,
     avoidOverlap: 1
   },
