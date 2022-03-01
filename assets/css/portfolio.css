@@ -20,7 +20,7 @@ body {
     display: grid;
     grid-template-areas: 
     "social-media portfolio email-to";
-    grid-template-columns: 100px 1fr 100px;
+    grid-template-columns: 80px 1fr 80px;
     grid-template-rows: 1fr;
     height: 100vh;
 }
