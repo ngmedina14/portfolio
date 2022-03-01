@@ -1,15 +1,146 @@
+@import url(../typefaces/typefaces.css);
+:root {
+  --font-main: Gilroy, sans-serif;
+  --font-secondary: Secondary Font, serif;
+}
 
+* {
+  font-family: var(--font-main);
+}
 
 body {
     margin: 0;
     padding: 0;
 }
 
+
+/* Portfolio Containers */
+
+.portfolio-container{
+    display: grid;
+    grid-template-areas: 
+    "social-media portfolio email-to";
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+.social-media{
+    grid-area: social-media;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.portfolio{
+    grid-area: portfolio;
+}
+.email-to{
+    grid-area: email-to;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* portfolio */
+.email-text{
+    color: #ececea;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.1em;
+}
+.email-text:hover{
+    color: #ececea;
+    transform: translateY(-5px);
+    transition-duration: 0.5s;
+}
+
+.social-media-text{
+    color: #ececea;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+.social-media-text:hover{
+    color: #ececea;
+    transform: translateX(25px);
+    transition-duration: 0.5s;
+}
+
+.v-line {
+    border: solid #ececea;
+    border-width: 0 1px;
+    height: 100px;
+}
+
+
+
+
 /* Network Graph */
 .vis-button{
     filter:grayscale();
 }
 #mynetwork {
-    width: 100%;
     height: 100vh;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    body{
+        background-color: rgb(189, 189, 62);
+    }
+    .portfolio-container{
+        display: grid;
+        grid-template-areas: 
+        "portfolio"
+        "email-to"
+        "social-media";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px 100px;
+    }
+    .v-line {
+        display: none;
+    }
+    .social-media{
+        grid-area: social-media;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .portfolio{
+        grid-area: portfolio;
+    }
+    .email-to{
+        grid-area: email-to;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .email-text{
+        color: #ececea;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        writing-mode:horizontal-tb;
+
+    }
+    .email-text:hover{
+        color: #ececea;
+        transform: translateY(-5px);
+        transition-duration: 0.5s;
+    }
+    
+    .social-media-text{
+        color: #ececea;
+        text-decoration: none;
+    }
+    .social-media-text:hover{
+        color: #ececea;
+        transform: translateY(-25px);
+        transition-duration: 0.5s;
+    }
 }
