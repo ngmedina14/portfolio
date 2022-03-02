@@ -219,11 +219,6 @@ body {
         80% {
             transform: scale(1.2);
         }
-    
-        95% {
-            transform: scale(0.5);
-        }
-    
         100% {
             transform: scale(1);
         }
