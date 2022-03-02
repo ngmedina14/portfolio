@@ -6,7 +6,7 @@ function draw() {
   // create people.
   // value corresponds with the age of the person
   nodes = [
-    { id: 1, group:'main', value: 1, label: "Neil Medina\nFull Stack\n Web Developer " },
+    { id: 1, group:'main', value: 1, label: "<b>Neil Medina</b>\n <code>( Web Developer )</code> " },
     { id: 2, group:'sub', value: 6, label: "Back-end" },
     { id: 3, group:'sub', value: 12, label: "Front-end" },
     { id: 4, group:'sub', value: 16, label: "Dev-ops" },
@@ -108,6 +108,13 @@ function draw() {
         background: 'aqua',
       }, 
       borderWidth:3,
+      font: {
+        // required: enables displaying <b>text</b> in the label as bold text
+        multi: 'html',
+        // optional: use this if you want to specify the font of bold text
+        bold: '55px courier black',
+        mono: '45px arial #505050'
+    }
     },
     sub: {
       shape: 'circle',  
@@ -116,6 +123,12 @@ function draw() {
         background: '#7EC8E3',
       }, 
       borderWidth:3,
+      font: {
+        // required: enables displaying <b>text</b> in the label as bold text
+        multi: 'html',
+        // optional: use this if you want to specify the font of bold text
+        bold: '70px times black'
+    }
     },
     title: {
       shape: 'ellipse',  
@@ -164,7 +177,7 @@ function draw() {
   },
   layout: {
     randomSeed:1,
-    clusterThreshold: 150,
+    clusterThreshold: 500,
    },
   edges: {
     smooth: {
@@ -194,7 +207,7 @@ physics: {
     theta: 0.5,
     centralGravity: 0.003,
     springConstant: 1,
-    springLength: 190,
+    springLength: 205,
     damping: 1,
     avoidOverlap: 1
   },
