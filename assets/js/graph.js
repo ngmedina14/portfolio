@@ -151,7 +151,6 @@ function draw() {
     borderWidthSelected: 0,
     shape: 'box',
     chosen: {
-      enabled:false,
       label:function (values, id, selected, hovering) {
         values.mod = 'bold';
     }
