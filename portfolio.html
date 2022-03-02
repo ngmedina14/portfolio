@@ -24,10 +24,10 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #505050;">
+    <nav class="navbar navbar-expand-md fixed-top pe-3" style="background-color: #505050;">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="#"><img class="mb-1" src="./assets/images/bamis-icon--white.png"
-                    alt="" /></a>
+            <a class="navbar-brand text-light logo ps-2" href="" target="_self"><img class="mb-1" height="30px"
+                    src="./assets/images/bamis-icon--white.png" alt="" /></a>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
                 aria-controls="navbarToggle" aria-expanded="true" aria-label="Toggle navigation">
                 <span class=""><i class="bi bi-list fs-1 text-light"></i></span>
@@ -35,52 +35,58 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav d-flex">
-                <a class="nav-item nav-link text-light text-nowrap text-center " aria-current="page" href="#history">My
+                <a class="nav-item nav-link text-light text-nowrap text-center navbar-text" aria-current="page"
+                    href="#history">My
                     History</a>
-                <a class="nav-item nav-link text-light text-nowrap text-center " href="#professional">Professional</a>
-                <a class="nav-item nav-link text-light text-nowrap text-center " href="#curriculum-vitae">Curriculum
+                <a class="nav-item nav-link text-light text-nowrap text-center navbar-text"
+                    href="#professional">Professional</a>
+                <a class="nav-item nav-link text-light text-nowrap text-center navbar-text"
+                    href="#curriculum-vitae">Curriculum
                     Vitae</a>
-                <a class="nav-item nav-link text-light text-nowrap text-center " href="#projects">Projects</a>
-                <a class="nav-item nav-link text-light text-nowrap text-center  me-3" href="#contact">Contact</a>
+                <a class="nav-item nav-link text-light text-nowrap text-center navbar-text"
+                    href="#projects">Projects</a>
+                <a class="nav-item nav-link text-light text-nowrap text-center navbar-text" href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <div class="portfolio-container">
-        <aside class="social-media vstack gap-3">
-            <a href="https://www.messenger.com/t/100024223240365" class="bi bi-messenger social-media-text fs-1"></a>
-            <a href="https://www.linkedin.com/in/neil-medina-079740195/" class="bi bi-linkedin social-media-text fs-1"></a>
-            <a href="https://github.com/ngmedina14/"class="bi bi-github social-media-text fs-1"></a>
-            <a href="mailto:ngmedina14@gmail.com" class="bi bi-envelope-fill social-media-text fs-1"></a>
+        <aside class="social-media vstack gap-3 sticky-top">
+            <a href="https://www.messenger.com/t/100024223240365" class="bi bi-messenger social-media-text fs-2"></a>
+            <a href="https://www.linkedin.com/in/neil-medina-079740195/"
+                class="bi bi-linkedin social-media-text fs-2"></a>
+            <a href="https://github.com/ngmedina14/" class="bi bi-github social-media-text fs-2"></a>
+            <a href="mailto:ngmedina14@gmail.com" class="bi bi-envelope-fill social-media-text fs-2"></a>
             <div class="v-line"></div>
         </aside>
-        <main class="portfolio container-md">
-        <!-- vis.js network graph -->
-        <div id="mynetwork"></div>
+        <main class="portfolio">
+            <!-- vis.js network graph -->
+            <div id="mynetwork"></div>
         </main>
         <aside class="email-to vstack gap-3">
-            <a class="email-text" href="mailto:ngmedina14@gmail.com">ngmedina14@gmail.com</a>
+            <a class="email-text fs-6" href="mailto:ngmedina14@gmail.com">ngmedina14@gmail.com</a>
             <div class="v-line"></div>
         </aside>
-    </div>
+        <div style="height: 200vh;">
+        </div>
 
 
-    
 
-    <!-- Particles Typescript JS -->
-    <script type="text/javascript" src="./assets/js/tsparticles.min.js"></script>
-    <!-- Vis JS -->
-    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script type="text/javascript" src="./assets/js/graph.js"></script>
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <!-- portfolio js -->
-    <script type="text/javascript" src="./assets/js/portfolio.js"></script>
-    <script>
 
-    </script>
+        <!-- Particles Typescript JS -->
+        <script type="text/javascript" src="./assets/js/tsparticles.min.js"></script>
+        <!-- Vis JS -->
+        <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+        <script type="text/javascript" src="./assets/js/graph.js"></script>
+        <!-- Bootstrap JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <!-- portfolio js -->
+        <script type="text/javascript" src="./assets/js/portfolio.js"></script>
+        <script>
+
+        </script>
 </body>
 
 </html>

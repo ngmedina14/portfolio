@@ -1,83 +1,117 @@
 @import url(../typefaces/typefaces.css);
+
 :root {
-  --font-main: Gilroy, sans-serif;
-  --font-secondary: Secondary Font, serif;
+    --font-main: Gilroy, sans-serif;
+    --font-secondary: Secondary Font, serif;
+    --hover-color: aqua;
 }
 
 * {
-  font-family: var(--font-main);
+    font-family: var(--font-main);
 }
 
 body {
+    background-color: #505050;
     margin: 0;
     padding: 0;
 }
 
-
 /* Portfolio Containers */
 
-.portfolio-container{
+.portfolio-container {
     display: grid;
-    grid-template-areas: 
-    "social-media portfolio email-to";
+    grid-template-areas:
+        "social-media portfolio email-to";
     grid-template-columns: 80px 1fr 80px;
     grid-template-rows: 1fr;
     height: 100vh;
 }
-.social-media{
+
+.social-media {
     grid-area: social-media;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.portfolio{
+
+.portfolio {
     grid-area: portfolio;
 }
-.email-to{
+
+.email-to {
     grid-area: email-to;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-/* portfolio */
-.email-text{
-    color: #ececea;
-    text-decoration: none;
-    writing-mode: vertical-rl;
-    letter-spacing: 0.1em;
+/******* portfolio *******/
+
+/* navbar */
+.logo {
+    transition-duration: 0.5s;
 }
-.email-text:hover{
-    color: #ececea;
-    transform: translateY(-5px);
+.logo:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0px 0px 10px var(--hover-color));
+}
+
+.navbar-text {
     transition-duration: 0.5s;
 }
 
-.social-media-text{
-    color: #ececea;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-}
-.social-media-text:hover{
-    color: #ececea;
-    transform: translateX(25px);
-    transition-duration: 0.5s;
+.navbar-text:hover {
+    filter: drop-shadow(0px 0px 20px var(--hover-color));
+    color: var(--hover-color) !important;
 }
 
+/* sides */
 .v-line {
     border: solid #ececea;
     border-width: 0 1px;
     height: 100px;
 }
 
+.email-text {
+    color: #ececea;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.1em;
+    transition-duration: 0.5s;
+}
+
+.email-text:hover {
+    color: var(--hover-color);
+    transform: translateY(-5px);
+}
+
+.social-media-text {
+    color: #ececea;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    transition-duration: 0.5s;
+}
+
+.social-media-text:hover {
+    color: var(--hover-color);
+    transform: translateX(25px);
+}
+
+
 
 
 
 /* Network Graph */
-.vis-button{
-    filter:grayscale();
+.vis-button {
+    transition-duration: 0.5s;
+    filter: grayscale();
 }
+
+.vis-button:hover {
+    filter: hue-rotate(70deg);
+}
+
 #mynetwork {
     height: 100vh;
 }
@@ -89,58 +123,63 @@ body {
 
 
 @media screen and (max-width:768px) {
-    body{
-        background-color: rgb(189, 189, 62);
-    }
-    .portfolio-container{
+
+    .portfolio-container {
         display: grid;
-        grid-template-areas: 
-        "portfolio"
-        "email-to"
-        "social-media";
+        grid-template-areas:
+            "portfolio"
+            "email-to"
+            "social-media";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 100px 100px;
     }
+
     .v-line {
         display: none;
     }
-    .social-media{
+
+    .social-media {
         grid-area: social-media;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-    .portfolio{
+
+    .portfolio {
         grid-area: portfolio;
     }
-    .email-to{
+
+    .email-to {
         grid-area: email-to;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
     }
-    .email-text{
+
+    .email-text {
         color: #ececea;
         text-decoration: none;
         letter-spacing: 0.1em;
-        writing-mode:horizontal-tb;
+        writing-mode: horizontal-tb;
+        transition-duration: 0.5s;
 
     }
-    .email-text:hover{
-        color: #ececea;
+
+    .email-text:hover {
+        color: var(--hover-color);
         transform: translateY(-5px);
-        transition-duration: 0.5s;
     }
-    
-    .social-media-text{
+
+    .social-media-text {
         color: #ececea;
         text-decoration: none;
-    }
-    .social-media-text:hover{
-        color: #ececea;
-        transform: translateY(-25px);
         transition-duration: 0.5s;
+    }
+
+    .social-media-text:hover {
+        color: var(--hover-color);
+        transform: translateY(-25px);
     }
 }

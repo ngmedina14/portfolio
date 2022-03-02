@@ -11,16 +11,16 @@ function draw() {
     { id: 3, group:'sub', value: 12, label: "Front-end" },
     { id: 4, group:'sub', value: 16, label: "Dev-ops" },
     { id: 5, group:'title', value: 17, label: "Others" },
-    { id: 6, value: 15, label: "HTML" },
-    { id: 7, value: 6, label: "Javascript" },
-    { id: 8, value: 5, label: "CSS" },
+    { id: 6, group:'language', value: 15, label: "HTML" },
+    { id: 7, group:'language', value: 6, label: "Javascript" },
+    { id: 8, group:'language', value: 5, label: "CSS" },
     { id: 9, value: 30, label: "Sass" },
     { id: 10, value: 18, label: "Bootstrap" },
     { id: 11, value: 18, label: "React js" },
     { id: 12, value: 18, label: "Vue js" },
     { id: 13, value: 18, label: "Vis js" },
     { id: 14, value: 18, label: "Node js" },
-    { id: 15, value: 18, label: "Go" },
+    { id: 15, group:'language', value: 18, label: "Go" },
     { id: 16, value: 18, label: "Uadmin" },
     { id: 17, value: 18, label: "Docker" },
     { id: 18, value: 18, label: "Vultr" },
@@ -29,7 +29,7 @@ function draw() {
     { id: 21, group:'title', value: 18, label: "OS" },
     { id: 22, value: 18, label: "Linux" },
     { id: 23, value: 18, label: "Windows" },
-    { id: 24, value: 18, label: "C#" },
+    { id: 24, group:'language', value: 18, label: "C#" },
     { id: 25, value: 18, label: "Github" },
     { id: 26, group:'title', value: 18, label: "Electronics" },
     { id: 27, value: 18, label: "Arduino" },
@@ -104,21 +104,29 @@ function draw() {
     main: {
       shape: 'circle', 
       color:{
-        border: '#7EC8E3',
-        background: '#7EC8E3',
+        border: 'aqua',
+        background: 'aqua',
       }, 
       borderWidth:3,
     },
     sub: {
       shape: 'circle',  
       color:{
-        border: '#b1dcec',
-        background: '#b1dcec',
+        border: '#7EC8E3',
+        background: '#7EC8E3',
       }, 
       borderWidth:3,
     },
     title: {
       shape: 'ellipse',  
+      color:{
+        border: '#b1dcec',
+        background: '#b1dcec',
+      }, 
+      borderWidth:3,
+    },
+    language: {
+      shape: 'box',  
       color:{
         border: '#d2edf7',
         background: '#d2edf7',
@@ -139,12 +147,12 @@ function draw() {
       border: '#fdfdfd',
       background: '#e3e3e1',
       highlight: {
-        border: '#7EC8E3',
-        background: '#7EC8E3',
+        border: 'aqua',
+        background: 'aqua',
       },
       hover: {
-        border: '#b1dcec',
-        background: '#b1dcec',
+        border: 'aqua',
+        background: 'aqua',
       }
     },
     
@@ -173,7 +181,7 @@ function draw() {
     arrowStrikethrough: false,
     chosen: true,
     color: {
-      highlight:'#7EC8E3',
+      highlight:'aqua',
       opacity:1.0
     },
 
