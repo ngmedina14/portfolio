@@ -16,35 +16,6 @@ body {
     padding: 0;
 }
 
-/* Portfolio Containers */
-
-.portfolio-container {
-    display: grid;
-    grid-template-areas:
-        "social-media portfolio email-to";
-    grid-template-columns: 80px 1fr 80px;
-    grid-template-rows: 1fr;
-    height: 100vh;
-}
-
-.social-media {
-    grid-area: social-media;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.portfolio {
-    grid-area: portfolio;
-}
-
-.email-to {
-    grid-area: email-to;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 /******* portfolio *******/
 
 /* navbar */
@@ -65,42 +36,100 @@ body {
     color: var(--hover-color) !important;
 }
 
-/* sides */
+/* Network Containers */
+
+.network-container {
+    display: grid;
+    grid-template-areas:
+        "social-media network email-to";
+    grid-template-columns: 70px 1fr 70px;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.social-media {
+    grid-area: social-media;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.network {
+    grid-area: network;
+}
+
+.email-to {
+    grid-area: email-to;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Network Sides */
 .v-line {
     border: solid #ececea;
     border-width: 0 1px;
+    background-color: #ececea;
     height: 100px;
+    width: 1px;
+    margin: 0% 50% ;
+    background: #ececea;
 }
-
-.email-text {
+.email-to ul{
+    position: fixed;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    left: auto;
+    right: 20px;
+    z-index: 10;
+}
+.email-to ul li{
+    list-style-type: none;
+    transition-duration: 0.5s;
+}
+.email-to ul li:hover{
+    transform: translateY(-5px);
+}
+.email-to ul li a{
     color: #ececea;
     text-decoration: none;
     writing-mode: vertical-rl;
     letter-spacing: 0.1em;
     transition-duration: 0.5s;
 }
-
-.email-text:hover {
+.email-to ul li a:hover{
     color: var(--hover-color);
-    transform: translateY(-5px);
 }
 
-.social-media-text {
-    color: #ececea;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
+.social-media ul {
+    position: fixed;
+    margin: 0;
+    padding: 0px;
+    bottom: 0px;
+    left: 20px;
+    right: auto;
+    z-index: 10;
+}
+
+.social-media ul li {
+    list-style: none;
     transition-duration: 0.5s;
 }
 
-.social-media-text:hover {
-    color: var(--hover-color);
-    transform: translateX(25px);
+.social-media ul li:hover {
+    transform: translateX(10px);
 }
 
+.social-media ul li a {
+    color: #ececea;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
 
-
-
+.social-media ul li a:hover {
+    color: var(--hover-color);
+}
 
 /* Network Graph */
 .vis-button {
@@ -124,62 +153,20 @@ body {
 
 @media screen and (max-width:768px) {
 
-    .portfolio-container {
+    .network-container {
         display: grid;
         grid-template-areas:
-            "portfolio"
-            "email-to"
-            "social-media";
+            "portfolio";
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 100px 100px;
+        grid-template-rows: 1fr;
     }
 
-    .v-line {
+    .email-to ul{
         display: none;
     }
-
-    .social-media {
-        grid-area: social-media;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    
+    .social-media ul {
+        display: none;
     }
-
-    .portfolio {
-        grid-area: portfolio;
-    }
-
-    .email-to {
-        grid-area: email-to;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .email-text {
-        color: #ececea;
-        text-decoration: none;
-        letter-spacing: 0.1em;
-        writing-mode: horizontal-tb;
-        transition-duration: 0.5s;
-
-    }
-
-    .email-text:hover {
-        color: var(--hover-color);
-        transform: translateY(-5px);
-    }
-
-    .social-media-text {
-        color: #ececea;
-        text-decoration: none;
-        transition-duration: 0.5s;
-    }
-
-    .social-media-text:hover {
-        color: var(--hover-color);
-        transform: translateY(-25px);
-    }
+    
 }
