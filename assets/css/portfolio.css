@@ -156,7 +156,7 @@ body {
     .network-container {
         display: grid;
         grid-template-areas:
-            "portfolio";
+            "network";
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
