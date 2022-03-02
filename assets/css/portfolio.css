@@ -28,7 +28,7 @@
     }
 
     80% {
-        transform: scale(4);
+        transform: scale(2);
     }
 
     95% {
@@ -211,6 +211,23 @@ body {
 
 
 @media screen and (max-width:768px) {
+    @keyframes animate-network {
+        0% {
+            transform: scale(0.1);
+        }
+    
+        80% {
+            transform: scale(1.5);
+        }
+    
+        95% {
+            transform: scale(0.5);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
 
     .network-container {
         display: grid;
