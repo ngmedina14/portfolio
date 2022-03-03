@@ -149,6 +149,7 @@ body {
 }
 
 .email-to ul li a {
+    width: 27px;
     color: #ececea;
     text-decoration: none;
     writing-mode: vertical-rl;

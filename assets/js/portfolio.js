@@ -14,12 +14,9 @@ function handleGesture() {
     distance = touchstartY - touchendY
 if (Math. abs(distance) > 200 ){
     if (touchendY < touchstartY) {
-        history.scrollIntoView();
-        console.log("down")
+        history.scrollIntoView(true);
       }
       if (touchendY > touchstartY) {
-        history.scrollIntoView();
-        console.log("up")
       }
 }
   
