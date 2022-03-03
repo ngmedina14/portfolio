@@ -4,6 +4,8 @@ particlesJS.load('', './assets/json/particlesjs-config.json', function () {
     console.log('particles.json loaded..');
 });
 
+
+// Network swipedown
 let touchstartY = 0
 let touchendY = 0
 
@@ -31,3 +33,6 @@ slider.ontouchend =(e) => {
     handleGesture()
 }
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
