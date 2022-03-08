@@ -84,7 +84,7 @@ body {
 
 .navbar {
     transform: scale(0);
-    animation: animate-navbar 0.5s 3s forwards;
+    animation: animate-navbar 0.5s 5s forwards;
 }
 
 .navbar-text {
@@ -117,7 +117,7 @@ body {
 .network {
     grid-area: network;
         transform: scale(0);
-        animation: animate-network 2.5s 1.1s forwards;
+        animation: animate-network 2.5s 3.1s forwards;
 }
 
 .email-to {
@@ -148,7 +148,7 @@ body {
     right: 20px;
     z-index: 10;
     transform: scale(0);
-    animation: animate-sides 0.4s 3s forwards;
+    animation: animate-sides 0.4s 5s forwards;
 }
 
 .email-to ul li {
@@ -182,7 +182,7 @@ body {
     right: auto;
     z-index: 10;
     transform: scale(0);
-    animation: animate-sides 0.4s 3s forwards;
+    animation: animate-sides 0.4s 5s forwards;
 }
 
 .social-media ul li {
