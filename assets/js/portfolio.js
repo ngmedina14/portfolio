@@ -1,3 +1,8 @@
+window.onload = function(){
+  //hide the preloader
+  document.querySelector(".preloader").style.display = "none";
+}
+
 
 // Particle Onload
 particlesJS.load('', './assets/json/particlesjs-config.json', function () {
